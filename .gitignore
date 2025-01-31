@@ -96,4 +96,3 @@ build-iPhoneSimulator/
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
->>>>>>> 9475626 (Completed dev block, refactored migrations and added models)
