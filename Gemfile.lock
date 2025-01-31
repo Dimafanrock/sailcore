@@ -136,6 +136,8 @@ GEM
       bigdecimal
       rexml
     crass (1.0.6)
+    cssbundling-rails (1.4.1)
+      railties (>= 6.0.0)
     csv (3.3.2)
     date (3.4.1)
     devise (4.9.4)
@@ -181,8 +183,15 @@ GEM
       pp (>= 0.6.0)
       rdoc (>= 4.0.0)
       reline (>= 0.4.2)
+    jbuilder (2.13.0)
+      actionview (>= 5.0.0)
+      activesupport (>= 5.0.0)
     jmespath (1.6.2)
+    jsbundling-rails (1.3.1)
+      railties (>= 6.0.0)
     json (2.9.1)
+    jwt (2.10.1)
+      base64
     kaminari (1.2.2)
       activesupport (>= 4.1.0)
       kaminari-actionview (= 1.2.2)
@@ -274,8 +283,6 @@ GEM
     rack (3.1.9)
     rack-cors (2.0.2)
       rack (>= 2.0.0)
-    rack-proxy (0.7.7)
-      rack
     rack-session (2.1.0)
       base64 (>= 0.1.0)
       rack (>= 3.0.0)
@@ -396,7 +403,6 @@ GEM
     sassc (2.1.0-x86_64-linux)
       ffi (~> 1.9)
     securerandom (0.4.1)
-    semantic_range (3.1.0)
     sentry-rails (5.22.3)
       railties (>= 5.0)
       sentry-ruby (~> 5.22.3)
@@ -405,6 +411,12 @@ GEM
       concurrent-ruby (~> 1.0, >= 1.0.2)
     shoulda-matchers (6.4.0)
       activesupport (>= 5.2.0)
+    sidekiq (7.3.8)
+      base64
+      connection_pool (>= 2.3.0)
+      logger
+      rack (>= 2.2.4)
+      redis-client (>= 0.22.2)
     simplecov (0.22.0)
       docile (~> 1.1)
       simplecov-html (~> 0.11)
@@ -445,11 +457,6 @@ GEM
       addressable (>= 2.8.0)
       crack (>= 0.3.2)
       hashdiff (>= 0.4.0, < 2.0.0)
-    webpacker (5.4.4)
-      activesupport (>= 5.2)
-      rack-proxy (>= 0.6.1)
-      railties (>= 5.2)
-      semantic_range (>= 2.3.0)
     websocket-driver (0.7.7)
       base64
       websocket-extensions (>= 0.1.0)
@@ -474,10 +481,14 @@ DEPENDENCIES
   byebug
   carrierwave (~> 2.0)
   carrierwave-aws (~> 1.3)
+  cssbundling-rails
   devise
   devise_token_auth
   factory_bot_rails
   faker
+  jbuilder (~> 2.13)
+  jsbundling-rails
+  jwt
   letter_opener_web
   listen (~> 3.9)
   mini_magick (~> 4.11)
@@ -497,6 +508,7 @@ DEPENDENCIES
   sentry-rails
   sentry-ruby
   shoulda-matchers (~> 6.1)
+  sidekiq
   simplecov
   spring
   spring-watcher-listen (~> 2.1)
@@ -506,7 +518,6 @@ DEPENDENCIES
   tzinfo-data
   web-console (~> 4.2, >= 4.2.1)
   webmock
-  webpacker (~> 5.4, >= 5.4.4)
 
 RUBY VERSION
    ruby 3.2.3p157

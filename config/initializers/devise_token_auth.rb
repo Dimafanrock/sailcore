@@ -10,7 +10,7 @@ DeviseTokenAuth.setup do |config|
   # Reduce token cost for testing (faster test runs)
   config.token_cost = Rails.env.test? ? 4 : 10
 
-  # Set max number of concurrent devices per user
+  # Set max number of concurrent devices per clients
   config.max_number_of_devices = 10
 
   # Allow batch requests within 5 seconds

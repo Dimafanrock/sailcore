@@ -51,5 +51,9 @@ module SailCore
     config.eager_load_paths << Rails.root.join('app/lib')
     config.autoload_paths << Rails.root.join('app/services')
     config.autoload_paths << Rails.root.join('app/lib')
+    config.action_cable.mount_path = '/cable'
+    config.action_cable.url = ENV.fetch('CABLE_URL', 'ws://localhost:3000/cable')
+    config.action_cable.allowed_request_origins = ['http://localhost:3000']
+    config.cache_store = :redis_cache_store, { url: ENV.fetch('REDIS_URL', 'redis://localhost:6379/1') }
   end
 end

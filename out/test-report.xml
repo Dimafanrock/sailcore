@@ -1,70 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
+  <file path="./spec/channels/connection_spec.rb">
+    <testCase name="successfully connects with a valid token" duration="334" />
+    <testCase name="rejects connection with an invalid token" duration="22">
+      <failure message="expected ActionCable::Connection::Authorization::UnauthorizedError but nothing was raised" stacktrace="./spec/channels/connection_spec.rb:13" />
+    </testCase>
+    <testCase name="rejects connection when no token is provided" duration="3">
+      <failure message="expected ActionCable::Connection::Authorization::UnauthorizedError but nothing was raised" stacktrace="./spec/channels/connection_spec.rb:18" />
+    </testCase>
+  </file>
+  <file path="./spec/lib/json_web_token_spec.rb">
+    <testCase name="returns a JWT token" duration="3" />
+    <testCase name="decodes a valid token correctly" duration="3" />
+    <testCase name="returns nil for an invalid token" duration="2" />
+  </file>
   <file path="./spec/models/admin_spec.rb">
   </file>
   <file path="./spec/support/shared_examples/validations.rb">
-    <testCase name="is expected to validate that :email cannot be empty/falsy" duration="310" />
-    <testCase name="is expected to allow :email to be ‹&apos;test@example.com&apos;›" duration="220" />
-    <testCase name="is expected not to allow :email to be ‹&apos;invalid_email&apos;›" duration="224" />
-    <testCase name="requires a secure password" duration="436" />
+    <testCase name="is expected to validate that :email cannot be empty/falsy" duration="322" />
+    <testCase name="is expected to allow :email to be ‹&apos;test@example.com&apos;›" duration="251" />
+    <testCase name="is expected not to allow :email to be ‹&apos;invalid_email&apos;›" duration="236" />
+    <testCase name="requires a secure password" duration="441" />
+    <testCase name="is expected to validate that :name cannot be empty/falsy" duration="236" />
+    <testCase name="is expected to validate that the length of :name is between 4 and 256" duration="245" />
+    <testCase name="is expected to validate that the length of :nickname is between 4 and 256" duration="241" />
   </file>
   <file path="./spec/models/admin_spec.rb">
   </file>
   <file path="./spec/support/shared_examples/authenticatable.rb">
-    <testCase name="authenticates with a valid password" duration="480" />
-    <testCase name="fails authentication with an incorrect password" duration="439" />
+    <testCase name="authenticates with a valid password" duration="479" />
+    <testCase name="fails authentication with an incorrect password" duration="470" />
   </file>
   <file path="./spec/models/admin_spec.rb">
   </file>
   <file path="./spec/support/shared_examples/image_uploader.rb">
-    <testCase name="is valid with a valid image" duration="230" />
-    <testCase name="is valid without an image" duration="224" />
-  </file>
-  <file path="./spec/models/admin_spec.rb">
-    <testCase name="validates presence of email" duration="222" />
+    <testCase name="is valid with a valid image" duration="233" />
+    <testCase name="is valid without an image" duration="217">
+      <failure message="Validation failed: Password Must include at least one letter and one number" stacktrace="./spec/support/shared_examples/image_uploader.rb:15" />
+    </testCase>
   </file>
   <file path="./spec/models/client_spec.rb">
   </file>
   <file path="./spec/support/shared_examples/validations.rb">
-    <testCase name="is expected to validate that :email cannot be empty/falsy" duration="233" />
-    <testCase name="is expected to allow :email to be ‹&apos;test@example.com&apos;›" duration="219" />
-    <testCase name="is expected not to allow :email to be ‹&apos;invalid_email&apos;›" duration="220" />
-    <testCase name="requires a secure password" duration="434" />
+    <testCase name="is expected to validate that :email cannot be empty/falsy" duration="240" />
+    <testCase name="is expected to allow :email to be ‹&apos;test@example.com&apos;›" duration="239" />
+    <testCase name="is expected not to allow :email to be ‹&apos;invalid_email&apos;›" duration="245" />
+    <testCase name="requires a secure password" duration="463" />
+    <testCase name="is expected to validate that :name cannot be empty/falsy" duration="225" />
+    <testCase name="is expected to validate that the length of :name is between 4 and 256" duration="258" />
+    <testCase name="is expected to validate that the length of :nickname is between 4 and 256" duration="250" />
   </file>
   <file path="./spec/models/client_spec.rb">
   </file>
   <file path="./spec/support/shared_examples/authenticatable.rb">
-    <testCase name="authenticates with a valid password" duration="438" />
-    <testCase name="fails authentication with an incorrect password" duration="439" />
+    <testCase name="authenticates with a valid password" duration="467" />
+    <testCase name="fails authentication with an incorrect password" duration="434" />
   </file>
   <file path="./spec/models/client_spec.rb">
   </file>
   <file path="./spec/support/shared_examples/image_uploader.rb">
-    <testCase name="is valid with a valid image" duration="232" />
-    <testCase name="is valid without an image" duration="227" />
-  </file>
-  <file path="./spec/models/client_spec.rb">
-    <testCase name="validates presence of name" duration="221" />
-    <testCase name="validates password format" duration="433" />
+    <testCase name="is valid with a valid image" duration="264" />
+    <testCase name="is valid without an image" duration="245" />
   </file>
   <file path="./spec/models/user_spec.rb">
   </file>
   <file path="./spec/support/shared_examples/validations.rb">
-    <testCase name="is expected to validate that :email cannot be empty/falsy" duration="225" />
-    <testCase name="is expected to allow :email to be ‹&apos;test@example.com&apos;›" duration="220" />
-    <testCase name="is expected not to allow :email to be ‹&apos;invalid_email&apos;›" duration="219" />
-    <testCase name="requires a secure password" duration="453" />
+    <testCase name="is expected to validate that :email cannot be empty/falsy" duration="251" />
+    <testCase name="is expected to allow :email to be ‹&apos;test@example.com&apos;›" duration="234" />
+    <testCase name="is expected not to allow :email to be ‹&apos;invalid_email&apos;›" duration="251" />
+    <testCase name="requires a secure password" duration="471" />
+    <testCase name="is expected to validate that :name cannot be empty/falsy" duration="235" />
+    <testCase name="is expected to validate that the length of :name is between 4 and 256" duration="231" />
+    <testCase name="is expected to validate that the length of :nickname is between 4 and 256" duration="244" />
   </file>
   <file path="./spec/models/user_spec.rb">
   </file>
   <file path="./spec/support/shared_examples/authenticatable.rb">
-    <testCase name="authenticates with a valid password" duration="437" />
-    <testCase name="fails authentication with an incorrect password" duration="442" />
+    <testCase name="authenticates with a valid password" duration="497" />
+    <testCase name="fails authentication with an incorrect password" duration="490" />
   </file>
   <file path="./spec/models/user_spec.rb">
   </file>
   <file path="./spec/support/shared_examples/image_uploader.rb">
-    <testCase name="is valid with a valid image" duration="228" />
-    <testCase name="is valid without an image" duration="224" />
+    <testCase name="is valid with a valid image" duration="247" />
+    <testCase name="is valid without an image" duration="243" />
+  </file>
+  <file path="./spec/requests/api/v1/auth/registrations_spec.rb">
+    <testCase name="creates a client" duration="287" />
+    <testCase name="returns an error" duration="374" />
+  </file>
+  <file path="./spec/requests/api/v1/auth/sessions_spec.rb">
+    <testCase name="returns a valid JWT token and client role" duration="679" />
+    <testCase name="returns a valid JWT token and admin role" duration="648" />
+    <testCase name="returns an error" duration="642" />
   </file>
 </testExecutions>
