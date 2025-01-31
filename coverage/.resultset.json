@@ -1,0 +1,107 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/home/ren/Documents/sailcore/app/models/user.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          null
+        ]
+      },
+      "/home/ren/Documents/sailcore/app/uploaders/image_uploader.rb": {
+        "lines": [
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          24,
+          null,
+          null,
+          null,
+          1,
+          120,
+          null,
+          null,
+          null,
+          1,
+          120,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null
+        ]
+      },
+      "/home/ren/Documents/sailcore/app/models/admin.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          1,
+          null
+        ]
+      },
+      "/home/ren/Documents/sailcore/app/models/client.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null
+        ]
+      },
+      "/home/ren/Documents/sailcore/app/jobs/application_job.rb": {
+        "lines": [
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0
+        ],
+        "branches": {}
+      }
+    },
+    "timestamp": 1738335504
+  }
+}

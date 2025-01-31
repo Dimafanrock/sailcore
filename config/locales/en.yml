@@ -1,0 +1,4 @@
+en:
+  models:
+    user:
+      password_validation: "Must include at least one letter and one number"

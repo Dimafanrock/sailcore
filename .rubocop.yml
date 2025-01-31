@@ -1,0 +1,34 @@
+inherit_from: .rubocop_todo.yml
+require: rubocop-rails
+
+AllCops:
+  SuggestExtensions: false
+  NewCops: enable
+
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Rails/SkipsModelValidations:
+  Enabled: false
+
+Metrics/BlockLength:
+  AllowedMethods:
+    - configure
+    - describe
+    - included
+    - rails_admin
+  Exclude:
+    - 'app/controllers/concerns/docs/api/v1/devise_token_auth/*.rb'
+    - 'app/controllers/concerns/docs/api/v1/*.rb'
+    - 'app/models/concerns/docs/*.rb'
+    - 'config/routes.rb'
+
+Rails/UnknownEnv:
+  Environments:
+    - production
+    - development
+    - test
+    - qa

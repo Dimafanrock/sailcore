@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username: sailcore_user
+  password: password
+  host: localhost
+
+development:
+  <<: *default
+  database: sailcore_dev
+
+test:
+  <<: *default
+  database: sailcore_test
+
+production:
+  <<: *default
+  database: sailcore_prod

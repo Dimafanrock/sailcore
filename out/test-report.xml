@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testExecutions version="1">
+  <file path="./spec/models/admin_spec.rb">
+  </file>
+  <file path="./spec/support/shared_examples/validations.rb">
+    <testCase name="is expected to validate that :email cannot be empty/falsy" duration="310" />
+    <testCase name="is expected to allow :email to be ‹&apos;test@example.com&apos;›" duration="220" />
+    <testCase name="is expected not to allow :email to be ‹&apos;invalid_email&apos;›" duration="224" />
+    <testCase name="requires a secure password" duration="436" />
+  </file>
+  <file path="./spec/models/admin_spec.rb">
+  </file>
+  <file path="./spec/support/shared_examples/authenticatable.rb">
+    <testCase name="authenticates with a valid password" duration="480" />
+    <testCase name="fails authentication with an incorrect password" duration="439" />
+  </file>
+  <file path="./spec/models/admin_spec.rb">
+  </file>
+  <file path="./spec/support/shared_examples/image_uploader.rb">
+    <testCase name="is valid with a valid image" duration="230" />
+    <testCase name="is valid without an image" duration="224" />
+  </file>
+  <file path="./spec/models/admin_spec.rb">
+    <testCase name="validates presence of email" duration="222" />
+  </file>
+  <file path="./spec/models/client_spec.rb">
+  </file>
+  <file path="./spec/support/shared_examples/validations.rb">
+    <testCase name="is expected to validate that :email cannot be empty/falsy" duration="233" />
+    <testCase name="is expected to allow :email to be ‹&apos;test@example.com&apos;›" duration="219" />
+    <testCase name="is expected not to allow :email to be ‹&apos;invalid_email&apos;›" duration="220" />
+    <testCase name="requires a secure password" duration="434" />
+  </file>
+  <file path="./spec/models/client_spec.rb">
+  </file>
+  <file path="./spec/support/shared_examples/authenticatable.rb">
+    <testCase name="authenticates with a valid password" duration="438" />
+    <testCase name="fails authentication with an incorrect password" duration="439" />
+  </file>
+  <file path="./spec/models/client_spec.rb">
+  </file>
+  <file path="./spec/support/shared_examples/image_uploader.rb">
+    <testCase name="is valid with a valid image" duration="232" />
+    <testCase name="is valid without an image" duration="227" />
+  </file>
+  <file path="./spec/models/client_spec.rb">
+    <testCase name="validates presence of name" duration="221" />
+    <testCase name="validates password format" duration="433" />
+  </file>
+  <file path="./spec/models/user_spec.rb">
+  </file>
+  <file path="./spec/support/shared_examples/validations.rb">
+    <testCase name="is expected to validate that :email cannot be empty/falsy" duration="225" />
+    <testCase name="is expected to allow :email to be ‹&apos;test@example.com&apos;›" duration="220" />
+    <testCase name="is expected not to allow :email to be ‹&apos;invalid_email&apos;›" duration="219" />
+    <testCase name="requires a secure password" duration="453" />
+  </file>
+  <file path="./spec/models/user_spec.rb">
+  </file>
+  <file path="./spec/support/shared_examples/authenticatable.rb">
+    <testCase name="authenticates with a valid password" duration="437" />
+    <testCase name="fails authentication with an incorrect password" duration="442" />
+  </file>
+  <file path="./spec/models/user_spec.rb">
+  </file>
+  <file path="./spec/support/shared_examples/image_uploader.rb">
+    <testCase name="is valid with a valid image" duration="228" />
+    <testCase name="is valid without an image" duration="224" />
+  </file>
+</testExecutions>
