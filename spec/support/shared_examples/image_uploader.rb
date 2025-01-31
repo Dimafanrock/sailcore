@@ -1,6 +1,7 @@
-RSpec.shared_examples 'an authenticatable user image uploader' do
+RSpec.shared_examples 'an authenticatable clients image uploader' do
   describe 'ImageUploader' do
-    let(:existing_user) { create(described_class.name.underscore.to_sym, password: 'Password@123!') }
+    let(:secure_password) { User.generate_secure_password }
+    let(:existing_user) { create(described_class.name.underscore.to_sym, password: secure_password, password_confirmation: secure_password) }
 
     context 'when uploading a valid image' do
       it 'is valid with a valid image' do

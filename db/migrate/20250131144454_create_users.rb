@@ -23,12 +23,6 @@ class CreateUsers < ActiveRecord::Migration[7.1]
       ## Rememberable
       t.datetime :remember_created_at
 
-      ## Confirmable
-      t.string   :confirmation_token
-      t.datetime :confirmed_at
-      t.datetime :confirmation_sent_at
-      t.string   :unconfirmed_email
-
       ## User Info
       t.string :name
       t.string :nickname
@@ -49,7 +43,6 @@ class CreateUsers < ActiveRecord::Migration[7.1]
     add_index :users, :email, unique: true
     add_index :users, %i[uid provider], unique: true
     add_index :users, :reset_password_token, unique: true
-    add_index :users, :confirmation_token, unique: true
     add_index :users, :type
   end
 end
