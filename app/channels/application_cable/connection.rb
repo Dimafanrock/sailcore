@@ -4,25 +4,14 @@ module ApplicationCable
 
     def connect
       self.current_user = find_verified_user
-    rescue StandardError
+    rescue AuthenticationError, ExpiredTokenError, InvalidTokenError
       reject_unauthorized_connection
     end
 
     private
 
     def find_verified_user
-      token = request.params[:token]
-      return nil if token.blank?
-
-      decoded_token = begin
-        JsonWebToken.decode(token)
-      rescue StandardError
-        nil
-      end
-      return nil if decoded_token.blank?
-
-      user = User.find_by(id: decoded_token[:user_id])
-      user || reject_unauthorized_connection
+      TokenVerifier.call(request.params[:token])
     end
   end
 end

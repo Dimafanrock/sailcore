@@ -2,3 +2,12 @@ en:
   models:
     user:
       password_validation: "Must include at least one letter and one number"
+  errors:
+    token:
+      missing: "Token is missing"
+      invalid: "Invalid token"
+      format: "Invalid token format"
+      expired: "Token has expired"
+      user_not_found: "User not found"
+    auth:
+      invalid_credentials: "Invalid email or password"
