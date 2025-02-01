@@ -1,4 +1,3 @@
-# config/initializers/carrier_wave.rb
 CarrierWave.configure do |config|
   if Rails.env.test?
     config.storage = :file

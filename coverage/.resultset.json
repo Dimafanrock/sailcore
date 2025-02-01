@@ -53,31 +53,25 @@
       },
       "/home/ren/Documents/sailcore/app/uploaders/image_uploader.rb": {
         "lines": [
-          null,
           1,
           1,
           null,
           1,
-          null,
           null,
           1,
           80,
           null,
           null,
+          1,
+          236,
+          null,
           null,
           1,
           236,
           null,
           null,
-          null,
-          1,
-          236,
-          null,
-          null,
-          null,
           1,
           1,
-          null,
           null,
           null,
           1,
@@ -332,20 +326,8 @@
           0
         ],
         "branches": {}
-      },
-      "/home/ren/Documents/sailcore/app/jobs/application_job.rb": {
-        "lines": [
-          0,
-          null,
-          null,
-          null,
-          null,
-          null,
-          0
-        ],
-        "branches": {}
       }
     },
-    "timestamp": 1738416764
+    "timestamp": 1738417603
   }
 }

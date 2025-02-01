@@ -1,4 +1,3 @@
-# spec/lib/json_web_token_spec.rb
 require 'rails_helper'
 
 RSpec.describe JsonWebToken do
@@ -8,7 +7,7 @@ RSpec.describe JsonWebToken do
   describe '.encode' do
     it 'returns a JWT token as a string' do
       expect(token).to be_a(String)
-      expect(token.split('.').size).to eq(3) # Ensure it's a valid JWT format
+      expect(token.split('.').size).to eq(3)
     end
   end
 
