@@ -1,0 +1,8 @@
+<h1>Welcome to My App</h1>
+<p>
+  <% if user_signed_in? %>
+    Hello, <%= current_user.name %>!
+  <% else %>
+    <%= link_to "Sign in", new_user_session_path %> or
+  <% end %>
+</p>

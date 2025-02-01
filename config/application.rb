@@ -14,6 +14,7 @@ require 'action_mailbox/engine'
 require 'action_text/engine'
 require 'action_cable/engine'
 require 'rails/test_unit/railtie'
+require 'devise'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -25,7 +26,8 @@ module SailCore
     config.load_defaults 7.1
 
     # API mode: No view rendering, minimal middleware
-    config.api_only = true
+    config.api_only = false
+    config.autoloader = :zeitwerk
 
     # Enable CORS for API requests (if needed)
     config.middleware.insert_before 0, Rack::Cors do

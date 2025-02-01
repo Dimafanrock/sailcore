@@ -53,15 +53,14 @@ GEM
     active_interaction (5.4.0)
       activemodel (>= 5.2, < 9)
       activesupport (>= 5.2, < 9)
+    active_link_to (1.0.5)
+      actionpack
+      addressable
     activejob (7.1.5.1)
       activesupport (= 7.1.5.1)
       globalid (>= 0.3.6)
     activemodel (7.1.5.1)
       activesupport (= 7.1.5.1)
-    activemodel-serializers-xml (1.0.3)
-      activemodel (>= 5.0.0.a)
-      activesupport (>= 5.0.0.a)
-      builder (~> 3.1)
     activerecord (7.1.5.1)
       activemodel (= 7.1.5.1)
       activesupport (= 7.1.5.1)
@@ -92,6 +91,22 @@ GEM
     addressable (2.8.7)
       public_suffix (>= 2.0.2, < 7.0)
     ast (2.4.2)
+    avo (3.16.5)
+      actionview (>= 6.1)
+      active_link_to
+      activerecord (>= 6.1)
+      activesupport (>= 6.1)
+      addressable
+      docile
+      inline_svg
+      meta-tags
+      pagy (>= 7.0.0)
+      prop_initializer (>= 0.2.0)
+      turbo-rails (>= 2.0.0)
+      turbo_power (>= 0.6.0)
+      universalid
+      view_component (>= 3.7.0)
+      zeitwerk (>= 2.6.12)
     aws-eventstream (1.3.0)
     aws-partitions (1.1044.0)
     aws-sdk-core (3.217.1)
@@ -115,6 +130,7 @@ GEM
     bindex (0.8.1)
     bootsnap (1.18.4)
       msgpack (~> 1.2)
+    brotli (0.6.0)
     builder (3.3.0)
     byebug (11.1.3)
     carrierwave (2.2.6)
@@ -131,6 +147,9 @@ GEM
     childprocess (5.1.0)
       logger (~> 1.5)
     concurrent-ruby (1.3.5)
+    config (5.5.2)
+      deep_merge (~> 1.2, >= 1.2.1)
+      ostruct
     connection_pool (2.5.0)
     crack (1.0.0)
       bigdecimal
@@ -138,8 +157,8 @@ GEM
     crass (1.0.6)
     cssbundling-rails (1.4.1)
       railties (>= 6.0.0)
-    csv (3.3.2)
     date (3.4.1)
+    deep_merge (1.2.2)
     devise (4.9.4)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -178,6 +197,13 @@ GEM
     image_processing (1.13.0)
       mini_magick (>= 4.9.5, < 5)
       ruby-vips (>= 2.0.17, < 3)
+    importmap-rails (2.1.0)
+      actionpack (>= 6.0.0)
+      activesupport (>= 6.0.0)
+      railties (>= 6.0.0)
+    inline_svg (1.10.0)
+      activesupport (>= 3.0)
+      nokogiri (>= 1.6)
     io-console (0.8.0)
     irb (1.15.1)
       pp (>= 0.6.0)
@@ -192,18 +218,6 @@ GEM
     json (2.9.1)
     jwt (2.10.1)
       base64
-    kaminari (1.2.2)
-      activesupport (>= 4.1.0)
-      kaminari-actionview (= 1.2.2)
-      kaminari-activerecord (= 1.2.2)
-      kaminari-core (= 1.2.2)
-    kaminari-actionview (1.2.2)
-      actionview
-      kaminari-core (= 1.2.2)
-    kaminari-activerecord (1.2.2)
-      activerecord
-      kaminari-core (= 1.2.2)
-    kaminari-core (1.2.2)
     language_server-protocol (3.17.0.4)
     launchy (3.1.0)
       addressable (~> 2.8)
@@ -229,12 +243,14 @@ GEM
       net-pop
       net-smtp
     marcel (1.0.4)
+    meta-tags (2.22.1)
+      actionpack (>= 6.0.0, < 8.1)
+    method_source (1.1.0)
     mini_magick (4.13.2)
     mini_mime (1.1.5)
     minitest (5.25.4)
     msgpack (1.7.5)
     mutex_m (0.3.0)
-    nested_form (0.3.2)
     net-imap (0.5.5)
       date
       net-protocol
@@ -262,6 +278,8 @@ GEM
     nokogiri (1.18.2-x86_64-linux-musl)
       racc (~> 1.4)
     orm_adapter (0.5.0)
+    ostruct (0.6.1)
+    pagy (9.3.3)
     paper_trail (16.0.0)
       activerecord (>= 6.1)
       request_store (~> 1.4)
@@ -273,6 +291,8 @@ GEM
     pp (0.6.2)
       prettyprint
     prettyprint (0.2.0)
+    prop_initializer (0.2.0)
+      zeitwerk (>= 2.6.18)
     psych (5.2.3)
       date
       stringio
@@ -315,13 +335,6 @@ GEM
     rails-html-sanitizer (1.6.2)
       loofah (~> 2.21)
       nokogiri (>= 1.15.7, != 1.16.7, != 1.16.6, != 1.16.5, != 1.16.4, != 1.16.3, != 1.16.2, != 1.16.1, != 1.16.0.rc1, != 1.16.0)
-    rails_admin (3.3.0)
-      activemodel-serializers-xml (>= 1.0)
-      csv
-      kaminari (>= 0.14, < 2.0)
-      nested_form (~> 0.3)
-      rails (>= 6.0, < 9)
-      turbo-rails (>= 1.0, < 3)
     railties (7.1.5.1)
       actionpack (= 7.1.5.1)
       activesupport (= 7.1.5.1)
@@ -427,15 +440,34 @@ GEM
     spring-watcher-listen (2.1.0)
       listen (>= 2.7, < 4.0)
       spring (>= 4)
+    sprockets (4.2.1)
+      concurrent-ruby (~> 1.0)
+      rack (>= 2.2.4, < 4)
+    sprockets-rails (3.5.2)
+      actionpack (>= 6.1)
+      activesupport (>= 6.1)
+      sprockets (>= 3.0.0)
     ssrf_filter (1.2.0)
     stringio (3.1.2)
     swagger-blocks (3.0.0)
+    tailwindcss-rails (4.0.0)
+      railties (>= 7.0.0)
+      tailwindcss-ruby (~> 4.0)
+    tailwindcss-ruby (4.0.3)
+    tailwindcss-ruby (4.0.3-aarch64-linux-gnu)
+    tailwindcss-ruby (4.0.3-aarch64-linux-musl)
+    tailwindcss-ruby (4.0.3-arm64-darwin)
+    tailwindcss-ruby (4.0.3-x86_64-darwin)
+    tailwindcss-ruby (4.0.3-x86_64-linux-gnu)
+    tailwindcss-ruby (4.0.3-x86_64-linux-musl)
     thor (1.3.2)
     timecop (0.9.10)
     timeout (0.4.3)
     turbo-rails (2.0.11)
       actionpack (>= 6.0.0)
       railties (>= 6.0.0)
+    turbo_power (0.7.0)
+      turbo-rails (>= 1.3.0)
     turbolinks (5.2.1)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
@@ -446,6 +478,16 @@ GEM
     unicode-display_width (3.1.4)
       unicode-emoji (~> 4.0, >= 4.0.4)
     unicode-emoji (4.0.4)
+    universalid (0.1.7)
+      activesupport (>= 6.1)
+      brotli (>= 0.4)
+      config (>= 5.0)
+      msgpack (>= 1.7)
+      zeitwerk (>= 2.6)
+    view_component (3.21.0)
+      activesupport (>= 5.2.0, < 8.1)
+      concurrent-ruby (~> 1.0)
+      method_source (~> 1.0)
     warden (1.2.9)
       rack (>= 2.0.9)
     web-console (4.2.1)
@@ -477,15 +519,17 @@ DEPENDENCIES
   active_interaction (~> 5.3)
   acts_as_list (~> 1.1)
   acts_as_votable
+  avo (>= 3.2)
   bootsnap (~> 1.18)
   byebug
   carrierwave (~> 2.0)
   carrierwave-aws (~> 1.3)
   cssbundling-rails
-  devise
+  devise (~> 4.9)
   devise_token_auth
   factory_bot_rails
   faker
+  importmap-rails (~> 2.1)
   jbuilder (~> 2.13)
   jsbundling-rails
   jwt
@@ -498,7 +542,6 @@ DEPENDENCIES
   rack-cors
   rails (~> 7.0)
   rails-controller-testing
-  rails_admin (~> 3.1, >= 3.1.2)
   redis (~> 5.1)
   rspec-rails (~> 6.1, >= 6.1.1)
   rspec-sonarqube-formatter (~> 1.5)
@@ -512,7 +555,9 @@ DEPENDENCIES
   simplecov
   spring
   spring-watcher-listen (~> 2.1)
+  sprockets-rails
   swagger-blocks
+  tailwindcss-rails
   timecop (~> 0.9.8)
   turbolinks (~> 5.2, >= 5.2.1)
   tzinfo-data

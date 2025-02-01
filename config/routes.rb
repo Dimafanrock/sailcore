@@ -1,17 +1,7 @@
 Rails.application.routes.draw do
-  devise_for :users
-  devise_for :clients, skip: :all
-  devise_for :admins, skip: :all
+  devise_for :users, controllers: { sessions: 'users/sessions' }
 
-  devise_scope :user do
-    authenticated :user do
-      root to: redirect('/admin')
-    end
-
-    unauthenticated :user do
-      root to: 'public#home', as: :unauthenticated_root
-    end
-  end
+  root to: 'home#index'
 
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
@@ -27,9 +17,6 @@ Rails.application.routes.draw do
     end
   end
 
-  get 'home', to: 'public#home'
-
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   # mount LetterOpenerWeb::Engine, at: '/letter_opener' if Rails.env.development?
   # get '/api' => redirect('/api/swagger-ui/dist/index.html?url=/api/v1/apidocs')
 end
