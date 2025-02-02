@@ -29,6 +29,14 @@ class User < ApplicationRecord
     type.downcase if type.present?
   end
 
+  def admin?
+    type == "Admin"
+  end
+
+  def client?
+    type == "Client"
+  end
+
   def self.generate_secure_password
     required_chars = [
       REQUIRED_CHARACTERS[:uppercase].sample,

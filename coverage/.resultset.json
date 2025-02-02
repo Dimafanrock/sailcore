@@ -35,6 +35,14 @@
           null,
           null,
           1,
+          2,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
           null,
           56,
           null,
@@ -59,7 +67,7 @@
           1,
           null,
           1,
-          100,
+          96,
           null,
           null,
           1,
@@ -85,7 +93,7 @@
           1,
           1,
           1,
-          17,
+          16,
           null,
           1,
           null,
@@ -298,6 +306,19 @@
           1,
           null,
           null,
+          1,
+          null,
+          1,
+          0,
+          null,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null,
           null
         ]
       },
@@ -358,8 +379,24 @@
           0
         ],
         "branches": {}
+      },
+      "/home/ren/Documents/sailcore/app/controllers/home_controller.rb": {
+        "lines": [
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {}
       }
     },
-    "timestamp": 1738488173
+    "timestamp": 1738492949
   }
 }

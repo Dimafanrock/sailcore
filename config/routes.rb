@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
-  root to: 'home#index'
+  authenticate :user, ->(user) { user.admin? } do
+    mount Avo::Engine, at: "/avo"
+  end
 
+  root to: 'home#index'
   devise_for :users, controllers: { sessions: 'users/sessions' }
 
   namespace :api, defaults: { format: :json } do
@@ -12,7 +15,6 @@ Rails.application.routes.draw do
         token_validations: 'api/v1/auth/token_validations'
       }
 
-      resources :users, only: [:index, :show, :update, :destroy]
       mount ActionCable.server => '/cable'
     end
   end
