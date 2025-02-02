@@ -1,40 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title><%= content_for?(:title) ? yield(:title) : "SailCore" %></title>
+  <title>SailCore</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
 
   <!-- CSS -->
-    <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
   <%= stylesheet_link_tag "application", media: "all", "data-turbo-track": "reload" %>
 
   <!-- JavaScript -->
   <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
-
 </head>
 
-<body>
-<nav>
-  <% if user_signed_in? %>
-    <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
-  <% else %>
-    <%= link_to 'Login', new_user_session_path %>
-  <% end %>
-</nav>
-
-<div class="container">
-  <% if flash[:notice] %>
-    <p class="notice"><%= flash[:notice] %></p>
-  <% end %>
-  <% if flash[:alert] %>
-    <p class="alert"><%= flash[:alert] %></p>
-  <% end %>
-
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+<div class="w-full max-w-md">
   <%= yield %>
-
 </div>
 </body>
 </html>

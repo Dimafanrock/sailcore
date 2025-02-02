@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: { sessions: 'users/sessions' }
-
   root to: 'home#index'
+
+  devise_for :users, controllers: { sessions: 'users/sessions' }
 
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
