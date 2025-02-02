@@ -14,6 +14,7 @@ require 'action_mailbox/engine'
 require 'action_text/engine'
 require 'action_cable/engine'
 require 'rails/test_unit/railtie'
+require 'devise'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -25,7 +26,8 @@ module SailCore
     config.load_defaults 7.1
 
     # API mode: No view rendering, minimal middleware
-    config.api_only = true
+    config.api_only = false
+    config.autoloader = :zeitwerk
 
     # Enable CORS for API requests (if needed)
     config.middleware.insert_before 0, Rack::Cors do
@@ -47,13 +49,24 @@ module SailCore
     config.generators.system_tests = nil
 
     # Auto-load paths
-    config.eager_load_paths << Rails.root.join('app/services')
-    config.eager_load_paths << Rails.root.join('app/lib')
-    config.autoload_paths << Rails.root.join('app/services')
-    config.autoload_paths << Rails.root.join('app/lib')
+    config.eager_load_paths += %W[
+      #{Rails.root.join('app/services')}
+      #{Rails.root.join('app/lib')}
+      #{Rails.root.join('app/errors')}
+      #{Rails.root.join('app/controllers/concerns')}
+    ]
+
+    config.autoload_paths += config.eager_load_paths
+
+    # Require all concerns to avoid NameErrors
+    Rails.root.glob('app/controllers/concerns/**/*.rb').each { |file| require file }
+
+    # ActionCable settings
     config.action_cable.mount_path = '/cable'
     config.action_cable.url = ENV.fetch('CABLE_URL', 'ws://localhost:3000/cable')
     config.action_cable.allowed_request_origins = ['http://localhost:3000']
+
+    # Cache store
     config.cache_store = :redis_cache_store, { url: ENV.fetch('REDIS_URL', 'redis://localhost:6379/1') }
   end
 end

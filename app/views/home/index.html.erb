@@ -1,0 +1,9 @@
+<% if user_signed_in? %>
+  <div class="bg-white p-6 shadow-md rounded-lg text-center">
+    <h1 class="text-2xl font-bold">Welcome to My App</h1>
+    <p class="text-lg">Hello, <%= current_user.name || current_user.email %>!</p>
+    <%= button_to "Logout", destroy_user_session_path, method: :delete, class: "w-full mt-4 bg-red-500 text-white p-2 rounded-lg hover:bg-red-600", data: { turbo: false } %>
+  </div>
+<% else %>
+  <%= render "users/sessions/form" %>
+<% end %>

@@ -9,6 +9,14 @@
     "rails_admin/@fortawesome/fontawesome-free": "^5.15.0"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "esbuild": "^0.24.2",
+    "postcss": "^8.5.1",
+    "tailwindcss": "^4.0.3",
     "webpack-dev-server": "^3"
+  },
+  "scripts": {
+    "build:css": "tailwindcss -i ./app/assets/stylesheets/application.tailwind.css -o ./app/assets/builds/application.css --minify",
+    "build": "esbuild app/javascript/*.* --bundle --sourcemap --format=esm --outdir=app/assets/builds --public-path=/assets"
   }
 }

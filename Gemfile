@@ -9,9 +9,11 @@ gem 'pg', '~> 1.5', '>= 1.5.6' # PostgreSQL database
 gem 'puma', '~> 6.4', '>= 6.4.2' # Web Server
 gem 'rack-cors' # CORS support for APIs
 gem 'tzinfo-data' # Timezone handling
+gem "jbuilder", "~> 2.13"
+gem "tailwindcss-rails"
 
 # 🔹 **Authentication & Authorization**
-gem 'devise'
+gem 'devise', '~> 4.9'
 gem 'devise_token_auth' # Token-based authentication for APIs
 gem 'jwt'
 
@@ -26,7 +28,8 @@ gem 'acts_as_list', '~> 1.1' # Ordered lists
 gem 'acts_as_votable' # Likes & Ratings
 
 # 🔹 **Admin Panel**
-gem 'rails_admin', '~> 3.1', '>= 3.1.2' # Admin dashboard
+gem "avo", ">= 3.2"
+gem 'sprockets-rails' # Option 1 (Classic Rails assets)
 gem 'paper_trail' # Audit logs for models
 
 # 🔹 **Background Jobs & Caching**
@@ -61,6 +64,9 @@ group :development, :test do
   gem 'timecop', '~> 0.9.8' # Time travel in tests
   gem 'webmock' # Mock external HTTP requests in tests
   gem 'byebug', platforms: %i[mri mingw x64_mingw] # Debugging
+  gem 'rswag-api'
+  gem 'rswag-ui'
+  gem 'rswag-specs'
 end
 
 group :development do
@@ -76,4 +82,4 @@ group :test do
   gem 'rails-controller-testing' # Controller testing support
 end
 
-gem "jbuilder", "~> 2.13"
+gem "importmap-rails", "~> 2.1"
