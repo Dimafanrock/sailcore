@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testExecutions version="1">
+  <file path="./spec/controllers/api/concerns/error_handler_spec.rb">
+    <testCase name="returns a 404 response with an error message" duration="86" />
+  </file>
+  <file path="./spec/controllers/home_controller_spec.rb">
+    <testCase name="redirects to the Avo admin panel" duration="302" />
+    <testCase name="renders the index page" duration="250" />
+    <testCase name="renders the index page" duration="4" />
+  </file>
+  <file path="./spec/lib/json_web_token_spec.rb">
+    <testCase name="returns a JWT token as a string" duration="2" />
+    <testCase name="decodes a valid token and returns payload" duration="2" />
+    <testCase name="returns nil for an invalid token" duration="2" />
+    <testCase name="returns nil for a blank token" duration="1" />
+  </file>
+  <file path="./spec/models/admin_spec.rb">
+  </file>
+  <file path="./spec/support/shared_examples/validations.rb">
+    <testCase name="is expected to validate that :email cannot be empty/falsy" duration="224" />
+    <testCase name="is expected to allow :email to be ‹&apos;test@example.com&apos;›" duration="222" />
+    <testCase name="is expected not to allow :email to be ‹&apos;invalid_email&apos;›" duration="217" />
+    <testCase name="requires a secure password" duration="425" />
+    <testCase name="is expected to validate that the length of :name is between 4 and 256" duration="228" />
+    <testCase name="is expected to validate that the length of :nickname is between 4 and 256" duration="233" />
+  </file>
+  <file path="./spec/models/admin_spec.rb">
+  </file>
+  <file path="./spec/support/shared_examples/authenticatable.rb">
+    <testCase name="authenticates with a valid password" duration="461" />
+    <testCase name="fails authentication with an incorrect password" duration="477" />
+  </file>
+  <file path="./spec/models/admin_spec.rb">
+  </file>
+  <file path="./spec/support/shared_examples/image_uploader.rb">
+    <testCase name="is valid with a valid image" duration="260" />
+    <testCase name="is valid without an image" duration="244" />
+  </file>
+  <file path="./spec/models/admin_spec.rb">
+  </file>
+  <file path="./spec/support/shared_examples/user_authentication_examples.rb">
+    <testCase name="generates a secure 24-character password" duration="2" />
+    <testCase name="authenticates with a valid password" duration="468" />
+    <testCase name="fails authentication with an incorrect password" duration="444" />
+  </file>
+  <file path="./spec/models/admin_spec.rb">
+  </file>
+  <file path="./spec/support/shared_examples/user_role_examples.rb">
+    <testCase name="returns the lowercase version of the type" duration="220" />
+    <testCase name="returns nil if type is not set" duration="231" />
+  </file>
+  <file path="./spec/models/admin_spec.rb">
+  </file>
+  <file path="./spec/support/shared_examples/user_token_examples.rb">
+    <testCase name="sends a password email" duration="1" />
+  </file>
+  <file path="./spec/models/client_spec.rb">
+  </file>
+  <file path="./spec/support/shared_examples/validations.rb">
+    <testCase name="is expected to validate that :email cannot be empty/falsy" duration="223" />
+    <testCase name="is expected to allow :email to be ‹&apos;test@example.com&apos;›" duration="218" />
+    <testCase name="is expected not to allow :email to be ‹&apos;invalid_email&apos;›" duration="217" />
+    <testCase name="requires a secure password" duration="430" />
+    <testCase name="is expected to validate that the length of :name is between 4 and 256" duration="225" />
+    <testCase name="is expected to validate that the length of :nickname is between 4 and 256" duration="221" />
+  </file>
+  <file path="./spec/models/client_spec.rb">
+  </file>
+  <file path="./spec/support/shared_examples/authenticatable.rb">
+    <testCase name="authenticates with a valid password" duration="432" />
+    <testCase name="fails authentication with an incorrect password" duration="430" />
+  </file>
+  <file path="./spec/models/client_spec.rb">
+  </file>
+  <file path="./spec/support/shared_examples/image_uploader.rb">
+    <testCase name="is valid with a valid image" duration="224" />
+    <testCase name="is valid without an image" duration="222" />
+  </file>
+  <file path="./spec/models/client_spec.rb">
+  </file>
+  <file path="./spec/support/shared_examples/user_authentication_examples.rb">
+    <testCase name="generates a secure 24-character password" duration="1" />
+    <testCase name="authenticates with a valid password" duration="432" />
+    <testCase name="fails authentication with an incorrect password" duration="428" />
+  </file>
+  <file path="./spec/models/client_spec.rb">
+  </file>
+  <file path="./spec/support/shared_examples/user_role_examples.rb">
+    <testCase name="returns the lowercase version of the type" duration="228" />
+    <testCase name="returns nil if type is not set" duration="228" />
+  </file>
+  <file path="./spec/models/client_spec.rb">
+  </file>
+  <file path="./spec/support/shared_examples/user_token_examples.rb">
+    <testCase name="sends a password email" duration="1" />
+  </file>
+  <file path="./spec/models/user_spec.rb">
+  </file>
+  <file path="./spec/support/shared_examples/validations.rb">
+    <testCase name="is expected to validate that :email cannot be empty/falsy" duration="226" />
+    <testCase name="is expected to allow :email to be ‹&apos;test@example.com&apos;›" duration="216" />
+    <testCase name="is expected not to allow :email to be ‹&apos;invalid_email&apos;›" duration="217" />
+    <testCase name="requires a secure password" duration="432" />
+    <testCase name="is expected to validate that the length of :name is between 4 and 256" duration="223" />
+    <testCase name="is expected to validate that the length of :nickname is between 4 and 256" duration="228" />
+  </file>
+  <file path="./spec/models/user_spec.rb">
+  </file>
+  <file path="./spec/support/shared_examples/authenticatable.rb">
+    <testCase name="authenticates with a valid password" duration="436" />
+    <testCase name="fails authentication with an incorrect password" duration="436" />
+  </file>
+  <file path="./spec/models/user_spec.rb">
+  </file>
+  <file path="./spec/support/shared_examples/image_uploader.rb">
+    <testCase name="is valid with a valid image" duration="225" />
+    <testCase name="is valid without an image" duration="223" />
+  </file>
+  <file path="./spec/models/user_spec.rb">
+  </file>
+  <file path="./spec/support/shared_examples/user_authentication_examples.rb">
+    <testCase name="generates a secure 24-character password" duration="1" />
+    <testCase name="authenticates with a valid password" duration="432" />
+    <testCase name="fails authentication with an incorrect password" duration="428" />
+  </file>
+  <file path="./spec/models/user_spec.rb">
+  </file>
+  <file path="./spec/support/shared_examples/user_role_examples.rb">
+    <testCase name="returns the lowercase version of the type" duration="226" />
+    <testCase name="returns nil if type is not set" duration="223" />
+  </file>
+  <file path="./spec/models/user_spec.rb">
+  </file>
+  <file path="./spec/support/shared_examples/user_token_examples.rb">
+    <testCase name="sends a password email" duration="1" />
+  </file>
+  <file path="./spec/requests/api/v1/auth/registrations_spec.rb">
+    <testCase name="creates a client and returns structured JSON" duration="245" />
+    <testCase name="returns an error response with correct messages" duration="216" />
+    <testCase name="returns an error response with correct messages" duration="221" />
+    <testCase name="returns an error response with correct messages" duration="436" />
+  </file>
+  <file path="./spec/requests/api/v1/auth/sessions_spec.rb">
+    <testCase name="returns a valid JWT token and client role" duration="660" />
+    <testCase name="returns a valid JWT token and admin role" duration="656" />
+    <testCase name="returns an error response with the correct status and message" duration="659" />
+    <testCase name="returns an error response with the correct status and message" duration="440" />
+    <testCase name="returns an error response with the correct status and message" duration="658" />
+  </file>
+  <file path="./spec/requests/users/sessions_spec.rb">
+    <testCase name="redirects to Avo admin panel" duration="667" />
+    <testCase name="redirects back to login page with an alert" duration="444" />
+    <testCase name="does not allow login" duration="666" />
+    <testCase name="redirects to login page after logout" duration="445" />
+  </file>
+  <file path="./spec/services/token_verifier_spec.rb">
+    <testCase name="returns the user" duration="222" />
+    <testCase name="raises an InvalidTokenError" duration="2" />
+    <testCase name="raises an InvalidTokenError" duration="1" />
+    <testCase name="raises an InvalidTokenError for invalid format" duration="220" />
+    <testCase name="raises an InvalidTokenError for invalid format" duration="2" />
+    <testCase name="raises an ExpiredTokenError" duration="221" />
+    <testCase name="raises an AuthenticationError" duration="2" />
+  </file>
+  <file path="./spec/uploaders/image_uploader_spec.rb">
+    <testCase name="returns the bucket name from ENV" duration="7" />
+    <testCase name="returns nil" duration="2" />
+  </file>
+</testExecutions>

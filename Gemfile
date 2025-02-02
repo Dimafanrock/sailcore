@@ -64,6 +64,9 @@ group :development, :test do
   gem 'timecop', '~> 0.9.8' # Time travel in tests
   gem 'webmock' # Mock external HTTP requests in tests
   gem 'byebug', platforms: %i[mri mingw x64_mingw] # Debugging
+  gem 'rswag-api'
+  gem 'rswag-ui'
+  gem 'rswag-specs'
 end
 
 group :development do
